@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products</title>
+    <!--BOOSTRAP-->
+    <link rel="stylesheet" href="assets/Bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="assets/Bootstrap/css/bootstrap.min.css">
+    <!--FUENTES DE GOOGLE-->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <!--LINK A CSS-->
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+    <header> <!--TITULO DE LA PAGINA-->
+        <div class="container-titulo">
+            <h1 class="text-center mt-2 mb-0 py-3 bg-info"> PERFUMES FACTORY PRODUCTOS</h1>
+        </div>
+    </header>
+
+    <nav class="navbar navbar-expand-lg bg-secondary py-3"> <!--BARRA NAVEGADORA-->
+        <div class="container">
+            <ul class="navbar-nav mx-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Home</a> <!--ENLACES-->
+                </li>
+                <div class="separator"></div>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Products</a>
+                </li>
+                <div class="separator"></div>
+                <li class="nav-item">
+                    <a class="nav-link" href="company.html">Company</a>
+                </li>
+                <div class="separator"></div>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Blogs</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container"> <!--INFORMACION DE VISUALIZACION-->
+        <p class="text-center mt-5">
+            Encuentra tu aroma perfecto en nuestra amplia colección de perfumes. Desde clásicos atemporales hasta las últimas tendencias, tenemos el perfume ideal para cada ocasión.
+            Sumérgete en un universo de aromas exclusivos. Nuestra selección de perfumes te ofrece la calidad de las grandes marcas, sin comprometer tu presupuesto.
+        </p>
+    </div>
+
+    <nav class="navbar bg-body-tertiary">
+        <div class="container-fluid bg-info">
+          <a class="navbar-brand">Busca tu perfume o crema preferida</a>
+          <form class="d-flex" role="search">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success" type="submit">Search</button>
+          </form>
+        </div>
+      </nav>
+
+    <div class="container my-5">
+        <div class="row text-center">
+            <div class="col-md-4 pb-3">
+                <div class="card" onclick="showDetails(1)">
+                    <img src="assets/IMG4.png" class="card-img-top" alt="Imagen 1">
+                    <div class="card-body">
+                        <h5 class="card-title text-start">Linea SPA</h5>
+                        <p class="card-text">$15.00</p>
+                        <button class="btn btn-info">Añadir al carrito</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 pb-3">
+                <div class="card" onclick="showDetails(2)">
+                    <img src="assets/IMG5.png" class="card-img-top" alt="Imagen 2">
+                    <div class="card-body">
+                        <h5 class="card-title text-start">Linea colores</h5>
+                        <p class="card-text">$20.00</p>
+                        <button class="btn btn-info">Añadir al carrito</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 pb-3">
+                <div class="card" onclick="showDetails(3)">
+                    <img src="assets/img6.png" class="card-img-top" alt="Imagen 3">
+                    <div class="card-body">
+                        <h5 class="card-title text-start">Perfumes de Caballero</h5>
+                        <p class="card-text">$15.00</p>
+                        <button class="btn btn-info">Añadir al carrito</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        <!-- Detalles del producto -->
+        <div id="details-box" class="details-box d-flex  pe-3">
+            <img id="details-img" src="assets/img8.png" alt="Imagen detallada" class="img-fluid mb-3">
+            <div class="container text-center contiene">
+                <h5 id="details-title" >Linea Color</h5>
+                <p id="details-description">Perfumes con una presentación, color y diseño innovador tanto para damas como para caballeros. Disponible en 4 presentaciones 15, 30, 50 y 100 ml que se adaptan a tu personalidad y estilo de vida.</p>
+                <p id="details-price">5$, 8$, 10$, 12$</p>
+                <button id="details-button" class="btn btn-info">Añadir al carrito</button>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        const products = {
+            1: {
+                img: 'assets/IMG4.png',
+                title: 'Linea SPA',
+                description: 'Deliciosos aromas florales y frutales que se complementan para brindarte las más frescas sensaciones y experiencias, compuesta por una mezcla de coco, manzana y durazno. Ideal para mujeres divertidas y aventureras, amantes del verano. Fragancias suaves, frescas y modernas desarrolladas por expertos perfumistas franceses, que contienen Centella Asiática y Algisium C para el cuidado de la piel. Splash de 240ml y body lotion de 200 ml, disponible en 4 presentaciones, Vainilla Celestial, Encantos de Pera una Dulce Seducción y Delicada Atracción',
+                price: '$15.00',
+            },
+            2: {
+                img: 'assets/IMG5.png',
+                title: 'Linea colores',
+                description: 'Perfumes con una presentación, color y diseño innovador tanto para damas como para caballeros. Disponible en 4 presentaciones 15, 30, 50 y 100 ml que se adaptan a tu personalidad y estilo de vida.',
+                price: '$20.00',
+            },
+            3: {
+                img: 'assets/img6.png',
+                title: 'Perfumes de caballeros',
+                description: 'Feromonas sintéticas que incrementan el sex appeal o atractivo sexual, generan una mayor seguridad en tu poder de seducción  o atracción; y aumentan la confianza y la sensación de bienestar, influyendo en tu estado de ánimo o comportamiento.',
+                price: '$15.00',
+            },
+        };
+    
+        function showDetails(productId) {
+            const product = products[productId];
+            document.getElementById('details-img').src = product.img;
+            document.getElementById('details-title').innerText = product.title;
+            document.getElementById('details-description').innerText = product.description;
+            document.getElementById('details-price').innerText = product.price;
+            document.getElementById('details-box').style.display = 'flex'; 
+        }
+    </script>
+
+<footer>
+    <div class="row g-0 text-center custom-row  bg-secondary mt-5">      <!--REDES SOCIALES-->
+        <div class="col-6 col-md-3 pt-5">
+            <p>+500M facebook <br> <br> +220M Instagram <br>
+        </div>
+        <div class="col-6 col-md-3 d-flex flex-column align-items-center pt-5 ">
+            <a target="_blank" class="link-net" href="https://www.facebook.com/PerfumesFactoryVenezuela?locale=es_LA">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="mb-4 icon icon-tabler icons-tabler-outline icon-tabler-brand-facebook">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                    <path d="M7 10v4h3v7h4v-7h3l1 -4h-4v-2a1 1 0 0 1 1 -1h3v-4h-3a5 5 0 0 0 -5 5v2h-3" />
+                </svg>
+            </a>
+
+            <a target="_blank" class="link-net"  href="https://www.instagram.com/perfumesfactoryvzla/">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                class="mb-4 icon icon-tabler icons-tabler-outline icon-tabler-brand-instagram">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                <path d="M4 4m0 4a4 4 0 0 1 4 -4h8a4 4 0 0 1 4 4v8a4 4 0 0 1 -4 4h-8a4 4 0 0 1 -4 -4z" />
+                <path d="M12 12m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0" />
+                <path d="M16.5 7.5l0 .01" />
+            </svg>
+            </a>
+
+        </div>
+        <div class="col-6 col-md-3  bg-secondary pt-5">
+            <form class="d-flex mt-5 ms-3" role="search">
+                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-dark" type="submit">Search</button>
+            </form>
+        </div>
+        <div class="col-6 col-md-3 bg-secondary pt-5">
+            <p class="ms-5 me-5">© 2024 Copyright Perfumes Factory</p>
+        </div>
+    </div>
+</footer>
+
+</body>
+
+</html>
